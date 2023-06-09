@@ -8,4 +8,5 @@
 0x06. C - More pointers, arrays and strings
 0x07-pointers_arrays_strings
 0x08. C - Recursion
+0x09-static_libraries
 
