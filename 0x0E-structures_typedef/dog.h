@@ -1,23 +1,27 @@
-#include <stdlib.h>
-#include "dog.h"
+#ifndef DOG_H
+#define DOG_H
 
 /**
- * _strlen - function that returns the length of a string
- * @s: string to evaluate
- *
- * Return: the length of the string
+ * struct dog - structure of a dog
+ * @name: First member
+ * @age: Second member
+ * @owner: Third member
+ * Description: Longer description
  */
 
-int _strlen(char *s)
+struct dog
 {
-	int i;
+	char *name;
+	float age;
+	char *owner;
+};
 
-	i = 0;
+typedef struct dog dog_t;
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
 
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-
-	return (i);
-}
+#endif
